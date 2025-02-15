@@ -169,3 +169,57 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Adding GitIgnore for Docker
+
+# Ignore node_modules, venv, and dependencies (if applicable)
+node_modules/
+venv/
+.env
+.env.local
+.env.*.local
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore logs and temp files
+logs/
+*.log
+*.out
+*.pid
+*.swp
+
+# Ignore Docker build files
+docker-compose.override.yml
+.dockerignore
+
+# Ignore Docker volumes and cache
+**/docker-data/
+**/docker-volumes/
+**/volumes/
+**/cache/
+**/tmp/
+
+# Ignore Docker build artifacts
+**/build/
+**/dist/
+**/target/
+*.tar
+*.bak
+
+# Ignore Docker Compose logs
+docker-compose*.log
+
+# Ignore Docker Desktop-related files (Mac/Windows)
+.vscode/
+*.dockerignore
+
+# Ignore IDE/editor files
+.idea/
+.vscode/
+*.iml
+
+# Ignore database dumps
+*.sql
+*.sqlite
