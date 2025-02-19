@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  spark:
+    image: bitnami/spark
+    ports:
+      - 8080:8080
+      - 4040:4040
+    environment:
+      - SPARK_MODE=master
+    networks:
+      - spark-network
+
+networks:
+  spark-network:
+    driver: bridge
