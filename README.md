@@ -11,7 +11,9 @@ Create DataOps Development Environment
 
 2) Setup Spark Container
 
-    docker-compose up
+    docker-compose up -d
+
+    docker-compose logs
 
 2) Activate Python Virtual Environment
 
@@ -19,7 +21,11 @@ Create DataOps Development Environment
     
         * venv is included in Python 3.3 and above
 
-        pip install virtualenv
+            python --version
+
+        * Install Python Virtual Environment
+
+            pip install virtualenv
 
     2) Create a Virtual Environment
 
@@ -52,26 +58,28 @@ Create DataOps Development Environment
 
 3) Run Python script or issue arguments via the command line
 
-    Script
+    * Script
 
-    python main.py
+        python main.py
 
-    Command Line
-    1) Type "python" and hit enter. This opens the Python Interpreter.
-    2) Import pyspark library
+    * Command Line
 
-        from pyspark.sql import SparkSession
-    
-    3) Start a spark session (local master 2/ no workers)
+        1) Type "python" and hit enter. This opens the Python Interpreter.
+        
+        2) Import pyspark library
 
-        spark = SparkSession.builder \
-        .appName("Example Application") \
-        .master("local[*]") \
-        .getOrCreate()
+            from pyspark.sql import SparkSession
+        
+        3) Start a spark session (local master 2/ no workers)
 
-    4) Issue Commands
+            spark = SparkSession.builder \
+                .appName("Example Application") \
+                .master("local[*]") \
+                .getOrCreate()
 
-        data = [("Alice", 34), ("Bob", 45), ("Cathy", 29)]
-        columns = ["Name", "Age"]
-        df = spark.createDataFrame(data, columns)
-        df.show()
+        4) Issue Commands
+
+            data = [("Alice", 34), ("Bob", 45), ("Cathy", 29)]
+            columns = ["Name", "Age"]
+            df = spark.createDataFrame(data, columns)
+            df.show()
