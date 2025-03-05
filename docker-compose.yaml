@@ -9,6 +9,11 @@ services:
     networks:
       - spark-network
 
+  python-app:
+    image: ajrusso/python-app:1.0
+    networks:
+      - spark-network
+
 networks:
   spark-network:
     driver: bridge
