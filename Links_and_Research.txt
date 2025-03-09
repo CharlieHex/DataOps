@@ -1,0 +1,5 @@
+Useful Links / Research
+
+Title: The Missing Cluster Hat Tutorial - Medium Artical and Tutorial
+Description: Discusses the acquisition, installation and initialization of the Pi Cluster.
+Link: https://medium.com/@dhuck/the-missing-clusterhat-tutorial-45ad2241d738
